@@ -9,8 +9,8 @@ export default function ListEmployee() {
     <>
     <h1 className={empstyle.title}>World Cup 2023 Squad</h1>
     <div className={empstyle.container}>
-      {ObjEmployee.map(({id,image,ename,age,role}) => {
-        return <GetEmployee key={id} id={id} image={image} ename={ename} age={age} role={role} />
+      {ObjEmployee.map((employee) => {
+        return <GetEmployee {...employee}/>
       })}
     </div>
 
